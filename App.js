@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 // import SavedRecipesScreen from './src/screens/SavedRecipesScreen';
 // import ScanRecipeScreen from './src/screens/ScanRecipeScreen';
 import MainScreen from './src/screens/MainScreen';
+import RecipeDetailScreen from './src/screens/RecipeDetailScreen';
 
 // function HomeScreen() {
 //   const navigation = useNavigation();
@@ -45,9 +46,21 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="MainScreen" component={MainScreen} options={{
-          headerShown: false,
-        }}/>
+        <Stack.Screen 
+          name="MainScreen" 
+          component={MainScreen} 
+          options={{
+            headerShown: false,
+        }}
+        />
+        <Stack.Screen 
+          name="RecipeDetailScreen" 
+          component={RecipeDetailScreen} 
+          options={{
+            title: 'Recipe Detail',
+            headerTransparent: true,
+        }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
